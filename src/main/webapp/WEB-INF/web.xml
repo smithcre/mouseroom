@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>MouseRoom.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>loginService</servlet-name>
+		<servlet-class>net.mouseroom.server.LoginServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>mouseService</servlet-name>
+		<servlet-class>net.mouseroom.server.MouseServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>loginService</servlet-name>
+		<url-pattern>/mouseroom/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>mouseService</servlet-name>
+		<url-pattern>/mouseroom/mouse</url-pattern>
+	</servlet-mapping>
+
+</web-app>
